@@ -50,4 +50,12 @@ describe("Query string to object", () => {
       name: "Raul",
     });
   });
+
+  it("should convert a query string to an object taking care of somma separating", () => {
+    const qs = "name=Raul&abilities=HTML,JS";
+    expect(parse(qs)).toEqual({
+      name: "Raul",
+      abilities: ["HTML", "JS"],
+    });
+  });
 });
