@@ -1,7 +1,4 @@
-const { axios } = require("axios");
-const { faker } = require("@faker-js/faker");
-
-module.exports.sum = (num1, num2) => {
+export function sum(num1, num2) {
   const int1 = parseInt(num1, 10);
   const int2 = parseInt(num2, 10);
 
@@ -9,7 +6,7 @@ module.exports.sum = (num1, num2) => {
     throw new Error("Please check your input");
   }
   return int1 + int2;
-};
+}
 
 // module.exports.multiplePost = async function multiplePost() {
 //   let data = {
